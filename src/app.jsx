@@ -1,5 +1,6 @@
 import React from 'react';
 import CoursesList from './components/CoursesList';
+import Menu from './components/Menu';
 
 export const App = (props) => {
     
@@ -7,6 +8,7 @@ export const App = (props) => {
     
     return (
         <div>
+            <Menu />
             <h1>Hello, React! </h1>
             <p>{textValue}</p>
             <hr></hr>
