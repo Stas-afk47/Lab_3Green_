@@ -8,7 +8,19 @@ export const App = (props) => {
     const textValue = 'Это какой-то текст';
     let page = "notCoursesList"; //допустим как-то вычислили страницу
     let pageContent;
-    if (window.location.href.indexOf("/coursesList") > 0) {
+    console.log ("URL"+window.location.pathname);
+    if (window.location.href.indexOf("/coursesList/") > 0) {
+        let url = window.location.pathname ;
+        url = url.replace('/coursesList/','');
+        pageContent = ( 
+            <CoursesList 
+                entries={props.courses.entries}
+                error={props.courses.error}
+            >
+                Это {url} <b>курс</b>
+            </CoursesList>
+        );
+    } else if (window.location.href.indexOf("/coursesList") > 0) {
         pageContent = ( 
             <CoursesList 
                 entries={props.courses.entries}
