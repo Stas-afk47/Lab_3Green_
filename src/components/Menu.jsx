@@ -2,7 +2,7 @@ import React from 'react';
 
 
 export const Menu = (props) => {
-    //TODO проверка данных
+    //TODO проверка данных - Заменить курс 1,2,3 на ссылки из CorsesList.jsx
    
     const entries = props.entries || [];
     return (
@@ -14,14 +14,14 @@ export const Menu = (props) => {
                   <button onclick="RedTeamFunction()"  class="dropbtn">Курсы</button>
                   <div id="courses" class="dropdown-content">
                     <a href="">Курс 1</a>
-                    <a href="">Курс 2</a>
-                    <a href="">Курс 3</a>
+                    <a href="">Курс 2</a> 
+                    <a href="">Курс 3</a> 
                   </div>
-                </div>
+              </div>
           </li>
           <li><a href="">Log in</a></li>
         </ul>
-      </nav>
+        </nav>
     );
 };
 

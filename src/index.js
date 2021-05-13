@@ -2,7 +2,7 @@ import 'regenerator-runtime/runtime';
 import React from 'react'; // https://ru.reactjs.org
 import ReactDOM from 'react-dom'; // https://ru.reactjs.org/docs/react-dom.html
 
-import App from './app';
+import App from './app.jsx';
 
 // TODO, YELLOW TEAM 
 async function getData () {
@@ -30,9 +30,17 @@ const data = getData();
 
 // React-Router, may be
 
+// data.then((value) => {
+//     const el = document.getElementById('app');
+//     ReactDOM.render(
+//         React.createElement(App, value),
+//         el
+//     );
+// })
+
 data.then((value) => {
     const el = document.getElementById('app');
-    const reactApp = React.createElement(App, value);
+    const reactApp = React.createElement(App, value); 
     ReactDOM.render(
         reactApp,
         el
