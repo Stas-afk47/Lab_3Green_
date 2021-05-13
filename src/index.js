@@ -29,7 +29,7 @@ const data = getData();
 
 
 // React-Router, may be
-
+//роблотай
 // data.then((value) => {
 //     const el = document.getElementById('app');
 //     ReactDOM.render(
