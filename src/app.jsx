@@ -1,5 +1,6 @@
 import React from 'react';
-import CoursesList from './components/CoursesList';
+import { getCoursesList } from '../api/contentful';
+import CoursesList, { Course1 } from './components/CoursesList';
 import Menu from './components/Menu';
 
 export const App = (props) => {
@@ -8,16 +9,16 @@ export const App = (props) => {
     const textValue = 'Это какой-то текст';
     let page = "notCoursesList"; //допустим как-то вычислили страницу
     let pageContent;
-    console.log ("URL"+window.location.pathname);
+    console.log ("URL = "+window.location.pathname); //Возможно оптимизировать ссылку url
     if (window.location.href.indexOf("/coursesList/") > 0) {
-        let url = window.location.pathname ;
-        url = url.replace('/coursesList/','');
+        let lasturl = window.location.pathname.replace("/coursesList/","") ;
+        let numbercourse = lasturl.replace ("course","");
         pageContent = ( 
             <CoursesList 
-                entries={props.courses.entries}
-                error={props.courses.error}
+                entries={props.courses.entries} //Как-то fetch? элемент из entries
+                //error={console.log ({Course1})}
             >
-                Это {url} <b>курс</b>
+                Это <b>{lasturl}</b>
             </CoursesList>
         );
     } else if (window.location.href.indexOf("/coursesList") > 0) {

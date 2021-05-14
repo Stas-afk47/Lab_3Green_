@@ -11,7 +11,7 @@ export const Menu = (props) => {
           <li><a href="http://localhost:1234">Главная</a></li> 
           <li> 
               <div className="dropdown">
-                  <button onСlick="RedTeamFunction()"  className="dropbtn"><a href="http://localhost:1234/coursesList">Курсы</a></button>
+                  <button className="dropbtn"><a href="http://localhost:1234/coursesList">Курсы</a></button>
                   <div id="courses" className="dropdown-content">
                     <a href="http://localhost:1234/coursesList/course1">Курс 1</a>
                     <a href="http://localhost:1234/coursesList/course2">Курс 2</a> 
