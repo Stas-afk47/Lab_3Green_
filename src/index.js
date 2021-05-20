@@ -5,13 +5,14 @@ import ReactDOM from 'react-dom'; // https://ru.reactjs.org/docs/react-dom.html
 import App from './app.jsx';
 
 // TODO, YELLOW TEAM 
+
+
 async function getData () {
     try {
         // https://learn.javascript.ru/fetch
         // https://developer.mozilla.org/ru/docs/Web/API/Fetch_API/Using_Fetch
         const response  = await fetch('http://localhost:3000/courses');
         const courses = await response.json();
-        console.log(courses);
         return { 
             something: "Строчка из пропсов",
             courses   
@@ -27,16 +28,6 @@ async function getData () {
 const data = getData();
 
 
-
-// React-Router, may be
-//роблотай
-// data.then((value) => {
-//     const el = document.getElementById('app');
-//     ReactDOM.render(
-//         React.createElement(App, value),
-//         el
-//     );
-// })
 
 data.then((value) => {
     const el = document.getElementById('app');
